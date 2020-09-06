@@ -9,23 +9,26 @@ dns:
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip
   nameserver:
-   - 119.29.29.29
-   - 223.5.5.5
-   - 114.114.114.114
-
+    - 119.29.29.29
+    - 223.5.5.5
+    - 114.114.114.114
 
 proxies:
-- name: "网易云解锁"
-  type: http
-  server: 47.93.183.181
-  port: 8868
-  
+  - name: 网易云解锁
+    server: 47.93.183.181
+    port: 8868
+    type: http
+    username: ""
+    password: ""
+    tls: false
+
 proxy-groups:
-- name: Netease Music
-  type: select
-  proxies:
+  - name: Netease Music
+    type: select
+    proxies:
   - DIRECT
   - 网易云解锁
+
   
  #Domain规则
 - DOMAIN-SUFFIX,163yun.com,Netease Music
