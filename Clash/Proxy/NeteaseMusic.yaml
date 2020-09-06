@@ -20,7 +20,7 @@ Proxy:
   server: 47.93.183.181
   port: 8868
   
- Proxy Group:
+Proxy Group:
 - name: Netease Music
   type: select
   proxies:
